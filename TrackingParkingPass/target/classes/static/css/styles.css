@@ -1,0 +1,69 @@
+:root {
+    
+    --main-color: #ffffff;
+}
+
+body{
+    background-color: lightcoral;
+}
+
+.logo{
+    height: 70px;
+}
+.no-link {
+    color: inherit;
+}
+
+.no-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.table-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container, .table-container {
+    margin: 0 auto;
+}
+
+.table-container {
+    margin: 0 auto;
+}
+
+.field-id {
+    width: 20px;
+    display: none;
+}
+
+.flex-sp-btw {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links > a {
+    margin-right: 24px;
+}
+
+.nav {
+    margin-bottom: 50px;
+}
+
+.ftr {
+    margin-top: 50px;
+    padding: 20px;
+}
+.vert-align {
+    display: flex;
+    align-items: center;
+}
+.centered{
+    margin: 0 auto;
+}
+

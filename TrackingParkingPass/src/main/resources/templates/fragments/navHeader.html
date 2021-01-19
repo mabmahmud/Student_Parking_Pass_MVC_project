@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <body>
+    <nav th:fragment="navbar" class="navbar nav" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a th:href="@{/}" class="vert-align">
+                <img src="/images/parking.png" class="logo"></span>
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" id="burg"
+               onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');"
+               data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a th:href="@{/parkingpass/list}" href="/parkingpass/list" class=" navbar-link">Parking Pass</a>
+                    <div class="navbar-dropdown">
+                        <a th:href="@{/parkingpass/list}" class="navbar-item">Parking Passes</a>
+                        <hr class="navbar-divider">          
+                            
+                        <a th:href="@{/parkingpass/showParkingPasses}" class="navbar-item">Show Parking Passes</a>
+                        <hr class="navbar-divider"> 
+                    </div>
+                </div>
+                <div class="navbar-end">
+                    <a th:href="@{/about}" class="navbar-item">
+                        About
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </body>
+</html>

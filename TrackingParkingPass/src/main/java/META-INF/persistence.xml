@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+  <persistence-unit name="NewPersistenceUnit">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <!--    <class>info.hccis.courtbooking.models.CodeValueEntity</class>
+    <class>info.hccis.camper.entity.jpa.Booking</class>-->
+    <class>info.hccis.camper.jpa.entity.Camper</class>
+    <class>info.hccis.parkingPass.jpa.entity.InnodbIndexStats</class>
+    <class>info.hccis.parkingPass.jpa.entity.IndexStats</class>
+    <class>info.hccis.parkingPass.jpa.entity.TimeZoneTransition</class>
+    <class>info.hccis.parkingPass.jpa.entity.Servers</class>
+    <class>info.hccis.parkingPass.jpa.entity.User</class>
+    <class>info.hccis.parkingPass.jpa.entity.Event</class>
+    <class>info.hccis.parkingPass.jpa.entity.TimeZone</class>
+    <class>info.hccis.parkingPass.jpa.entity.GlobalPriv</class>
+    <class>info.hccis.parkingPass.jpa.entity.HelpRelation</class>
+    <class>info.hccis.parkingPass.jpa.entity.TimeZoneLeapSecond</class>
+    <class>info.hccis.parkingPass.jpa.entity.TablesPriv</class>
+    <class>info.hccis.parkingPass.jpa.entity.ProcsPriv</class>
+    <class>info.hccis.parkingPass.jpa.entity.ColumnStats</class>
+    <class>info.hccis.parkingPass.jpa.entity.Func</class>
+    <class>info.hccis.parkingPass.jpa.entity.TransactionRegistry</class>
+    <class>info.hccis.parkingPass.jpa.entity.TimeZoneTransitionType</class>
+    <class>info.hccis.parkingPass.jpa.entity.TableStats</class>
+    <class>info.hccis.parkingPass.jpa.entity.Proc</class>
+    <class>info.hccis.parkingPass.jpa.entity.ColumnsPriv</class>
+    <class>info.hccis.parkingPass.jpa.entity.HelpTopic</class>
+    <class>info.hccis.parkingPass.jpa.entity.ProxiesPriv</class>
+    <class>info.hccis.parkingPass.jpa.entity.TimeZoneName</class>
+    <class>info.hccis.parkingPass.jpa.entity.InnodbTableStats</class>
+    <class>info.hccis.parkingPass.jpa.entity.HelpCategory</class>
+    <class>info.hccis.parkingPass.jpa.entity.Db</class>
+    <class>info.hccis.parkingPass.jpa.entity.Plugin</class>
+    <class>info.hccis.parkingPass.jpa.entity.HelpKeyword</class>
+    <class>info.hccis.parkingPass.jpa.entity.GtidSlavePos</class>
+    <class>info.hccis.parkingPass.jpa.entity.ParkingPass</class>
+    <properties>
+      <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/cis2232_camper"/>
+      <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="hibernate.connection.username" value=""/>
+      <property name="hibernate.connection.password" value=""/>
+      <property name="hibernate.archive.autodetection" value="class"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+    </properties>
+  </persistence-unit>
+</persistence>

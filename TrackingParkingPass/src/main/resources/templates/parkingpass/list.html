@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:include="fragments/head :: headerFragment">
+        <title></title>
+    </head>
+    <body>
+        <nav th:replace="fragments/navHeader :: navbar"></nav>
+
+        
+        
+        
+        <div class="container">
+            <h2 class="title is-2 has-text-centered">Parking Pass List&nbsp;</h2>
+            <p><span th:text="${message}"></span></p>
+
+            <div class="table-container">
+
+           <p><span th:text="${findNameMessage}"></span><br><br></p>
+
+                
+                <table class="table centered is-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 150px;">ID</th>
+                            <th style="width: 150px;">First Name</th>
+                            <th style="width: 150px;">Last Name</th>
+                            <th style="width: 150px;">License Plate</th>
+                            <th style="width: 150px;">Program</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="parkingpass : ${parkingpasses}">
+                            <td th:text="${parkingpass.id}"></td>
+                            <td th:text="${parkingpass.firstName}"></td>
+                            <td th:text="${parkingpass.lastName}"></td>
+                            <td th:text="${parkingpass.licensePlate}"></td>
+                            <td th:text="${parkingpass.program}"></td>  
+            
+                            <td><a th:href="@{/parkingpass/edit(id=${parkingpass.id})}">Edit</a>&nbsp;<a
+                                    th:href="@{/parkingpass/delete(id=${parkingpass.id})}">Delete</a></td>
+
+                        </tr>
+                    </tbody>
+                    
+
+                </table>
+                <div class="addparkingpass">                 
+                   
+                    <a th:href="@{/parkingpass/add}" class="button"> Add Parking Pass</a>
+                    
+                </div>
+               
+                
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+        <footer th:replace="fragments/footer :: footer"></footer>
+    </body>
+</html>
+
+
+<!--<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:include="fragments/head :: headerFragment">
+        <title></title>
+    </head>
+    <body>
+        <nav th:replace="fragments/navHeader :: navbar"></nav>
+
+        
+        
+        
+        <div class="container">
+            <h2 class="title is-2 has-text-centered">Parking Pass List&nbsp;</h2>
+            <p><span th:text="${findNameMessage}"></span></p>
+            <p><span th:text="${message}"></span></p>
+
+            <div class="table-container">
+
+                <a th:href="@{/parkingpass/add}" th:text="Add" class="button"></a>
+
+                
+                <table class="table centered is-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 150px;">id</th>
+                            <th style="width: 150px;">First</th>
+                            <th style="width: 150px;">Last</th>
+                            <th style="width: 150px;">License Plate</th>
+                            <th style="width: 150px;">Program</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="parkingPass : ${parkingPasses}">
+                            <td th:text="${parkingPass.id}"></td>
+                            <td th:text="${parkingPass.firstName}"></td>
+                            <td th:text="${parkingPass.lastName}"></td>
+                            <td th:text="${parkingPass.licensePlate}"></td>
+                            <td th:text="${parkingPass.program}"></td>
+                            <td><a th:href="@{/parkingpass/edit(id=${parkingPass.id})}">Edit</a>&nbsp;<a
+                            th:href="@{/parkingpass/delete(id=${parkingPass.id})}">Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                                         <div class="addparkingpass">
+                            
+                    <p><span th:text="${findNameMessage}"></span><br><br></p>
+                    <a th:href="@{/parkingpass/add}" class="button"> Add a Parking pass</a>
+                    
+                </div>     
+            </div>
+
+        </div>
+
+
+        <footer th:replace="fragments/footer :: footer"></footer>
+    </body>
+</html>
+
+-->

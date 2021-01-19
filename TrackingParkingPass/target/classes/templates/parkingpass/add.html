@@ -1,0 +1,123 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:include="fragments/head :: headerFragment">
+        <title></title>
+    </head>
+    <body>
+        <nav th:replace="fragments/navHeader :: navbar"></nav>
+        <div class="container">
+            <form th:object="${parkingpass}" action="/parkingpass/addSubmit" th:action="@{/parkingpass/addSubmit}" method="post" class="form-horizontal">
+                <fieldset>
+                    <p th:text="${message}">message here</p>
+                    <table class="table table-striped">
+                        <tr>
+                            <td><input type= "hidden" th:field="${parkingpass.id}"</td>
+                        </tr>
+                        <tr>
+                            <th>First Name</th>
+                            <td><input type="text" th:field="${parkingpass.firstName}"/>
+                                <ul th:if="${#fields.hasErrors('firstName')}">
+                                    <li class="error" th:each="err : ${#fields.errors('firstName')}" th:text="${err}"> First Name is invalid</li>
+                                </ul><br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Last Name</th>
+                            <td><input type="text" th:field="${parkingpass.lastName}"/>
+                                <ul th:if="${#fields.hasErrors('lastName')}">
+                                    <li class="error" th:each="err : ${#fields.errors('lastName')}" th:text="${err}">Last Name is invalid</li>
+                                </ul><br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>License Plate</th>
+                            <td><input type="text" th:field="${parkingpass.licensePlate}"/>
+                                <ul th:if="${#fields.hasErrors('licensePlate')}">
+                                    <li class="error" th:each="err : ${#fields.errors('licensePlate')}" th:text="${err}">License Plate is invalid</li>
+                                </ul><br/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>Program</th>
+                            <td><input type="text" th:field="${parkingpass.program}"/>
+                                 <ul th:if="${#fields.hasErrors('program')}">
+                                        <li class="error" th:each="err : ${#fields.errors('program')}" th:text="${err}">Program is invalid</li>
+                                 </ul><br/>
+                            </td>
+                        </tr>
+
+                    </table>
+                    <div style="text-align: left;" class="form-actions">
+                        <button class="button" type="submit">Add</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <footer th:replace="fragments/footer :: footer"></footer>
+    </body>
+</html>
+
+
+<!--<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+   <head th:include="fragments/head :: headerFragment">
+        <title></title>
+    </head>
+    <body>
+    <nav th:replace="fragments/navHeader :: navbar"></nav>
+    <div class="container">
+            <form th:object="${parkingpass}" action="/parkingpass/addSubmit" th:action="@{/parkingpass/addSubmit}" method="post" class="form-horizontal">
+                <fieldset>
+                    <p th:text="${message}">message here</p>
+                    <table class="table table-striped">
+                        <tr>
+                            <td><input type= "hidden" th:field="${parkingPass.id}"</td>
+                        </tr>
+                        <tr>
+                            <th>First Name</th>
+                            <td><input type="text" th:field="${parkingPass.firstName}"/>
+                                 <ul th:if="${#fields.hasErrors('firstName')}">
+                                        <li class="error" th:each="err : ${#fields.errors('firstName')}" th:text="${err}">Name invalid</li>
+                                 </ul><br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Last Name</th>
+                            <td><input type="text" th:field="${parkingPass.lastName}"/>
+                                 <ul th:if="${#fields.hasErrors('lastName')}">
+                                        <li class="error" th:each="err : ${#fields.errors('lastName')}" th:text="${err}">Name invalid</li>
+                                 </ul><br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>License Plate</th>
+                            <td><input type="text" th:field="${parkingPass.licensePlate}"/>
+                                 <ul th:if="${#fields.hasErrors('licensePlate')}">
+                                        <li class="error" th:each="err : ${#fields.errors('licensePlate')}" th:text="${err}">License plate invalid</li>
+                                 </ul><br/>
+                            </td>
+                        </tr>
+                        
+                                                <tr>
+                            <th>Program</th>
+                            <td><input type="text" th:field="${parkingPass.program}"/>
+                                 <ul th:if="${#fields.hasErrors('program')}">
+                                        <li class="error" th:each="err : ${#fields.errors('program')}" th:text="${err}">Name invalid</li>
+                                 </ul><br/>
+                            </td>
+                        </tr>
+
+                    </table>
+                    <div style="text-align: left;" class="form-actions">
+                        <button class="button" type="submit">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    
+      <footer th:replace="fragments/footer :: footer"></footer>
+    </body>
+</html>
+
+
+-->
